@@ -23,16 +23,30 @@ Clone repo to your apache document root.
 
 ### Create subfolder "touch" and copy the following files from Sencha Touch 2.1:
 
-	touch/
-		cmd/
-		microloader/
-		resources/
-		sencha-touch-all-debug.js
-		sencha-touch-all.js
-		sencha-touch-debug.js
-		sencha-touch.js
-		src/
-		version.txt
+	/var/
+		www/
+			sencha-touch-chat/			<-- will get created by <pre>git clone</pre> (see above)
+				app/
+				app.js
+				app.json
+				favicon.ico
+				index.html
+				nodejs/
+					ChatServer.js
+					node_modules/		<-- will get created by npm install socket.io
+				README.md
+				resources/
+				touch/					<-- create and populate manually from Sencha Touch 2.1 distro
+					cmd/
+					microloader/
+					resources/
+					sencha-touch-all-debug.js
+					sencha-touch-all.js
+					sencha-touch-debug.js
+					sencha-touch.js
+					src/
+					version.txt
+
 
 The "touch" subfolder gets created via normal app generation process when using Sencha Cmd. For example:
 
