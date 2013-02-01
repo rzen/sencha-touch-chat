@@ -16,7 +16,7 @@
      * This value is needed when build to resolve your application's dependencies if it requires server-side resources
      * that are not accessible via file system protocol.
      */
-    "url": "http://localhost/link-mobile/chat/",
+    "url": "http://localhost/sencha-touch-chat/",
 
     /**
      * List of all JavaScript assets in the right execution order.

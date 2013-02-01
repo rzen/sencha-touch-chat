@@ -52,7 +52,7 @@ Clone repo to your apache document root.
 
 The "touch" subfolder gets created via normal app generation process when using Sencha Cmd. For example:
 
-	$ sencha generate app Chat /var/www/link-mobile/chat
+	$ sencha generate app Chat /var/www/sencha-touch-chat
 
 Sencha Cmd may tell you to upgrade:
 
