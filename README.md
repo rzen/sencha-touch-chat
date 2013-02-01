@@ -9,29 +9,28 @@ This is purely for demonstration purposes, the chat even generates random nickna
 Installation
 ------------
 
-1. Install NodeJS:
+#. Install NodeJS:
 
-	Download from nodejs.org and follow download and installation instructions.
+Download from nodejs.org and follow download and installation instructions.
 
-2. Install Socket.IO:
+#. Install Socket.IO:
 
 	npm install -g socket.io
 
-	-g to install globally, or omit that to install locally. When installed locally, npm will
+-g to install globally, or omit that to install locally. When installed locally, npm will
 	create a local folder called "node_modules".
 
 3. Go to your webserver's document root:
 
 	cd /var/www
 
-	In this README.md we'll assume that the location of this folder is /var/www. Naturally it will vary.
+In this README.md we'll assume that the location of this folder is /var/www. Naturally it will vary.
 
 3. Clone this project from GitHub:
 
-
 	git clone https://github.com/rzen/sencha-touch-chat.git
 
-	Clone repo to your apache document root. 
+Clone repo to your apache document root. 
 
 
 Running chat server
