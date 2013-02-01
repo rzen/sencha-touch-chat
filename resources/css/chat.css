@@ -1,12 +1,12 @@
 .message {
-	white-space:normal; 
-	font-weight:normal;
-	text-align:left;
+	white-space: normal; 
+	font-weight: normal;
+	text-align: left;
 }
 
 .nick {
-	font-size:80%; 
-	font-family:inconsolata,helvetica,sans-serif; 
+	font-size: 80%; 
+	font-family: inconsolata,helvetica,sans-serif; 
 }
 
 .nick.local {
