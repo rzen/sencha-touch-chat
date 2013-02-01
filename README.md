@@ -54,6 +54,18 @@ The "touch" subfolder gets created via normal app generation process when using 
 
 	$ sencha generate app Chat /var/www/link-mobile/chat
 
+Sencha Cmd may tell you to upgrade:
+
+	$ sencha app build production
+	Sencha Cmd v3.0.2.288
+	[ERR]		The application was last modified by an older version of Sencha CMD (0.0.0.0).  Please run 'sencha app upgrade -noframework' to update.
+	[ERR]		Application cmd version incompatible with this one.
+
+
+Simply follow the instructions and perform upgrade:
+
+	$ sencha app upgrade -noframework
+
 
 ### Install NodeJS:
 
