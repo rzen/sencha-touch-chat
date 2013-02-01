@@ -2,3 +2,5 @@
 build
 archive
 touch
+.sass-cache
+/nodejs/node_modules
