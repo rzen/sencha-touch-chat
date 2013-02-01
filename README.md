@@ -23,15 +23,20 @@ Clone repo to your apache document root.
 
 ### Create subfolder "touch" and copy the following files from Sencha Touch 2.1:
 
-	cmd/
-	microloader/
-	resources/
-	sencha-touch-all-debug.js
-	sencha-touch-all.js
-	sencha-touch-debug.js
-	sencha-touch.js
-	src/
-	version.txt
+	touch/
+		cmd/
+		microloader/
+		resources/
+		sencha-touch-all-debug.js
+		sencha-touch-all.js
+		sencha-touch-debug.js
+		sencha-touch.js
+		src/
+		version.txt
+
+The "touch" subfolder gets created via normal app generation process when using Sencha Cmd. For example:
+
+	$ sencha generate app Chat /var/www/link-mobile/chat
 
 
 ### Install NodeJS:
@@ -104,4 +109,3 @@ The Software shall be used for Good, not Evil.
 ## Disclaimer
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
