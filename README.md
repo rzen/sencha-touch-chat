@@ -4,6 +4,8 @@ Example chat using Sencha Touch 2.1, NodeJS and Socket.IO
 
 This is purely for demonstration purposes, the chat even generates random nicknames and messages to facilitate showing off simultaneous chat windows.
 
+![](http://cl.ly/image/24051c2e0a0O/Chat-2.png) ![](http://cl.ly/image/0z26451A3e2z/Chat-3.png)
+
 
 ## Installation
 
