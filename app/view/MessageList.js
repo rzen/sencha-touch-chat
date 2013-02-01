@@ -5,18 +5,23 @@ Ext.define('Chat.view.MessageList', {
 	
 	config: {
 		disableSelection: true,
-		title: 'Chat',
+		title: 'Sencha Touch Chat',
 		store: 'Messages',
+
 		itemTpl : new Ext.XTemplate(
 			'<tpl if="local">',
-			'	<div class="local">',
+			'	<div class="nick local">{nickname}</div>',
+			'	<div class="x-button x-button-confirm local"">',
+			'		<p class="x-button-label message">{message}</p>',
+			'	</div>',
 			'<tpl else>',
-			'	<div class="remote">',
-			'</tpl>',
-			'	<p class="nickname">{nickname}</p>',
-			'	<p class="message">{message}</p>',
-			'</div>'
+			'	<div class="nick remote">{nickname}</div>',
+			'	<div class="x-button remote"">',
+			'		<p class="x-button-label message">{message}</p>',
+			'	</div>',
+			'</tpl>'
 		),
+
 		items: [{
 			xtype: 'toolbar',
 			docked: 'bottom',

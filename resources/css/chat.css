@@ -1,31 +1,30 @@
 .message {
-	position:relative;
-	padding:15px;
-	border-radius:10px;
-	box-shadow:0 1px 2px rgba(0, 0, 0, .5) inset, 0 1px 0 #FFF;
+	white-space:normal; 
+	font-weight:normal;
+	text-align:left;
 }
 
+.nick {
+	font-size:80%; 
+	font-family:inconsolata,helvetica,sans-serif; 
+}
 
-.local .message {
-	background: -webkit-radial-gradient(10% 50%, #147, #369);
-	border: 1px solid #369;
-	color: white;
+.nick.local {
+	text-align: right;
+}
+
+.nick.remote {
+	text-align: left;
+}
+
+.x-button.local {
 	margin-left: 20%;
-	text-align: right;
 }
 
-.remote .message {
-	background: -webkit-radial-gradient(10% 50%, #999, #666);
-	border: 1px solid #999;
-	color: white;
+.x-button.remote {
 	margin-right: 20%;
-	text-align: left;
 }
 
-.local .nickname {
+.x-button.local p {
 	text-align: right;
-}
-
-.remote .nickname {
-	text-align: left;
 }
