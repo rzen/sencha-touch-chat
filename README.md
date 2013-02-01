@@ -9,14 +9,14 @@ This is purely for demonstration purposes, the chat even generates random nickna
 
 ### Go to your webserver's document root:
 
-	cd /var/www
+	$ cd /var/www
 
 In this README.md we'll assume that the location of this folder is /var/www. Naturally it will vary.
 
 
 ### Clone this project from GitHub:
 
-	git clone https://github.com/rzen/sencha-touch-chat.git
+	$ git clone https://github.com/rzen/sencha-touch-chat.git
 
 Clone repo to your apache document root. 
 
@@ -25,7 +25,7 @@ Clone repo to your apache document root.
 
 	/var/
 		www/
-			sencha-touch-chat/			<-- will get created by <pre>git clone</pre> (see above)
+			sencha-touch-chat/			<-- will get created by git clone (see above)
 				app/
 				app.js
 				app.json
@@ -60,8 +60,8 @@ Download from http://nodejs.org/download/ and follow download and installation i
 
 ### Install Socket.IO:
 
-	cd /var/www/sencha-touch-chat
-	npm install socket.io
+	$ cd /var/www/sencha-touch-chat
+	$ npm install socket.io
 
 
 ## Running chat server
@@ -70,8 +70,8 @@ This project uses nodejs as its chat server. Server code is located in nodejs/Ch
 
 To start chat server:
 
-	cd nodejs
-	node ChatServer.js
+	$ cd nodejs
+	$ node ChatServer.js
 
 
 ## Customization
@@ -92,8 +92,8 @@ Using Sencha Cmd to compile project takes load time for this app from roughly 10
 
 Here's how:
 
-	cd /var/www
-	sencha app build production
+	$ cd /var/www
+	$ sencha app build production
 
 Packaged code will be available in
 
