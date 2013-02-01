@@ -89,11 +89,11 @@ Ext.define('Chat.controller.MessageList',{
 		var message = this.prepareMessage();
 		this.getSocket().emit('message', message);
 		this.addMessage(Ext.apply({local: true}, message));
+		this.getMessage().setValue(Ext.create('Chat.ux.LoremIpsum').getSentence());
 	},
 
 	addMessage: function(message) {
 		Ext.getStore('Messages').add(message);
-		this.getMessage().setValue(Ext.create('Chat.ux.LoremIpsum').getSentence());
 
 		if (this.getMaxPosition()) {
 			this.getScroller().scrollToEnd(true);
