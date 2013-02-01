@@ -1,8 +1,3 @@
-# UNDER CONSTRUCTION
-
-I'm in the process of making available this project. Please bear with me as this probably will take a few days.
-
-
 # sencha-touch-chat
 
 Example chat using Sencha Touch 2.1, NodeJS and Socket.IO
