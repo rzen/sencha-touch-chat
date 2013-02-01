@@ -26,6 +26,19 @@ In this README.md we'll assume that the location of this folder is /var/www. Nat
 Clone repo to your apache document root. 
 
 
+### Create subfolder "touch" and copy the following files from Sencha Touch 2.1:
+
+	cmd/
+	microloader/
+	resources/
+	sencha-touch-all-debug.js
+	sencha-touch-all.js
+	sencha-touch-debug.js
+	sencha-touch.js
+	src/
+	version.txt
+
+
 ### Install NodeJS:
 
 Download from http://nodejs.org/download/ and follow download and installation instructions.
