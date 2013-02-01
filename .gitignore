@@ -1,6 +1,6 @@
 .DS_Store
-build
-archive
-touch
+/build
+/archive
+/touch
 .sass-cache
 /nodejs/node_modules
