@@ -7,7 +7,7 @@ io.sockets.on('connection', function (socket) {
 	socket.on('register', function (u) {
 		user = u;
 		socket.emit('message', {
-			nickname: 'Server',
+			nickname: '** SERVER **',
 			message: 'Welcome to chat ' + user.nickname + '!'
 		});
 	});
