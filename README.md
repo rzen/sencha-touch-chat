@@ -77,7 +77,7 @@ Download from http://nodejs.org/download/ and follow download and installation i
 
 ### Install Socket.IO:
 
-	$ cd /var/www/sencha-touch-chat
+	$ cd /var/www/sencha-touch-chat/nodejs
 	$ npm install socket.io
 
 
