@@ -17,7 +17,7 @@ Ext.define('Chat.ux.LoremIpsum', {
 	},
 
 	getSentence: function () {
-		var words = this.getWords(this.getRandomInteger(8, 32));
+		var words = this.getWords(this.getRandomInteger(4, 12));
 		words[0] = words[0].substr(0,1).toUpperCase() + words[0].substr(1);
 		return words.join(' ') + '.';
 	},
