@@ -1,4 +1,6 @@
-var io = require('socket.io').listen(3333);
+var io = require('socket.io').listen(3333, {
+	'browser client minification': true
+});
 
 io.sockets.on('connection', function (socket) {
 
