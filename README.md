@@ -54,7 +54,7 @@ Clone repo to your apache document root.
 The "touch" subfolder was originally created via normal app generation process [using Sencha Cmd](http://docs.sencha.com/touch/2-1/#!/guide/command_app "Using Sencha Cmd with Sencha Touch"). This subfolder is not included with Sencha Touch Chat, you will need to recreate it by copying it from another application:
 
 	$ sencha generate app SomeOtherApplication /var/www/some-other-application
-	$ cp /var/www/some-other-application/touch /var/www/sencha-touch-chat
+	$ cp -R /var/www/link-mobile/chat/touch /var/www/sencha-touch-chat/touch
 
 Be sure to check your paths before running these copy commands!
 
