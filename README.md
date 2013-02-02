@@ -1,6 +1,6 @@
 # sencha-touch-chat
 
-Example chat using Sencha Touch 2.1, NodeJS and Socket.IO
+Example chat using [Sencha Touch 2.1](http://www.sencha.com/products/touch/ "Sencha Touch"), [NodeJS](http://nodejs.org/ "NodeJS") and [Socket.IO](http://socket.io/ "Socket.IO").
 
 This is purely for demonstration purposes, the chat even generates random nicknames and messages to facilitate showing off simultaneous chat windows.
 
