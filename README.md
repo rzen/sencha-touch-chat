@@ -87,7 +87,6 @@ This project uses nodejs as its chat server. Server code is located in nodejs/Ch
 
 To start chat server:
 
-	$ cd nodejs
 	$ node ChatServer.js
 
 
