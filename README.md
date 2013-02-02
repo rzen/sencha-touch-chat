@@ -4,7 +4,7 @@ Example chat application based on [Sencha Touch 2.1](http://www.sencha.com/produ
 
 This app is purely for demonstration purposes, the chat even generates random nicknames and messages to facilitate showing off simultaneous chat windows.
 
-![](https://github.com/rzen/sencha-touch-chat/blob/master/resources/Screenshots/Screenshot%20-%20Login.png?raw=true) ![](http://cl.ly/image/2i3P1i2m411v/sencha-touch-chat-message-list.png)
+![](https://github.com/rzen/sencha-touch-chat/blob/master/resources/Screenshots/Screenshot%20-%20Login.png?raw=true) ![](https://github.com/rzen/sencha-touch-chat/blob/master/resources/Screenshots/Screenshot%20-%20MessageList.png?raw=true)
 
 ![](http://cl.ly/image/2b330W0f0O0P/node%20%20_private_var_www_sencha-touch-chat_nodejs%20—%20node%20—%20130×40.png)
 
