@@ -27,29 +27,29 @@ Ext.define('Chat.ux.LoremIpsum', {
 		for (var i = 0; i < num; ++i) {
 			sentences.push(this.getSentence());
 		}
-		return sentences.join('  ');
+		return sentences.join(' ');
 	},
 
-	words: ["ab", "aberant", "abscidit",
-		"acervo", "ad", "addidit", "adhuc", "adsiduis",      "adspirate", "aequalis",
-		"aer", "aera", "aere", "aeris", "aestu", "aetas", "aethera",      "aethere",
+	words: [
+		"acervo", "ad", "addidit", "adhuc", "adsiduis", "adspirate", "aequalis",
+		"aer", "aera", "aere", "aeris", "aestu", "aetas", "aethera", "aethere",
 		"agitabilis", "aliis", "aliud", "alta", "altae", "alto", "ambitae",
 		"amphitrite", "animal", "animalia", "animalibus", "animus", "ante", "aquae",
 		"arce", "ardentior", "astra", "aurea", "auroram", "austro", "bene", "boreas",
 		"bracchia", "caeca", "caecoque", "caeleste", "caeli", "caelo", "caelum",
 		"caelumque", "caesa", "calidis", "caligine", "campoque", "campos", "capacius",
 		"carentem", "carmen", "cepit", "certis", "cesserunt", "cetera", "chaos:",
-		"cingebant",      "cinxit", "circumdare", "circumfluus", "circumfuso",
-		"coegit", "coeperunt", "coeptis",      "coercuit", "cognati", "colebat",
-		"concordi", "congeriem", "congestaque", "consistere",      "contraria",
+		"cingebant", "cinxit", "circumdare", "circumfluus", "circumfuso",
+		"coegit", "coeperunt", "coeptis", "coercuit", "cognati", "colebat",
+		"concordi", "congeriem", "congestaque", "consistere", "contraria",
 		"conversa", "convexi", "cornua", "corpora", "corpore", "crescendo", "cum",
 		"cuncta", "cura", "declivia", "dedit", "deducite", "deerat", "dei", "densior",
-		"deorum",      "derecti", "descenderat", "deus", "dextra", "di", "dicere",
-		"diffundi", "diremit",      "discordia", "dispositam", "dissaepserat",
-		"dissociata", "distinxit", "diu", "diversa",      "diverso", "divino",
+		"deorum", "derecti", "descenderat", "deus", "dextra", "di", "dicere",
+		"diffundi", "diremit", "discordia", "dispositam", "dissaepserat",
+		"dissociata", "distinxit", "diu", "diversa", "diverso", "divino",
 		"dixere", "dominari", "duae", "duas", "duris", "effervescere",
 		"effigiem", "egens", "elementaque", "emicuit", "ensis", "eodem", "erant",
-		"erat",      "erat:", "erectos", "est", "et", "eurus", "evolvit", "exemit",
+		"erat", "erat:", "erectos", "est", "et", "eurus", "evolvit", "exemit",
 		"extendi", "fabricator", "facientes", "faecis", "fecit", "feras", "fert",
 		"fidem", "figuras", "finxit", "fixo", "flamina", "flamma", "flexi",
 		"fluminaque", "fontes", "foret", "forma", "formaeque", "formas", "fossae",
@@ -98,5 +98,6 @@ Ext.define('Chat.ux.LoremIpsum', {
 		"umentia", "umor", "unda", "undae", "undas", "undis", "uno", "unus", "usu",
 		"ut", "utque", "utramque", "valles", "ventis", "ventos", "verba", "vesper",
 		"videre", "vindice", "vis", "viseret", "vix", "volucres", "vos", "vultus",
-		"zephyro", "zonae"]
+		"zephyro", "zonae"
+	]
 });

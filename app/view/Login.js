@@ -4,42 +4,37 @@ Ext.define('Chat.view.Login', {
 	xtype: 'login',
 
 	requires: [
-		'Ext.form.FieldSet',
-		'Ext.field.Text',
+		'Ext.form.FieldSet', 
+		'Ext.field.Text', 
 		'Ext.field.Email'
 	],
 
 	config: {
 		title: 'Login',
 		disableSelection: true,
-		items: [
-            {
-            	xtype			: 'fieldset',
-            	title			: 'User',
-            	instructions	: 'Chat Demo.',
-            	items: [
-					{
-						xtype		: 'textfield',
-						name		: 'nickname',
-						label		: 'Nickname'
-					}, {
-						xtype		: 'textfield',
-						name		: 'server',
-						label		: 'Server',
-						value		: 'http://localhost:3333'
-					}
-            	]
-            }, {
-            	items: {
-	            	xtype			: 'button',
-	            	centered		: true,
-	                ui				: 'round confirm',
-	                text			: 'Start Chat',
-	                itemId			: 'start',
-	                width			: '50%'
-            	}
-            }
-
-		]
+		items: [{
+			xtype: 'fieldset',
+			title: 'User',
+			instructions: 'Chat Demo.',
+			items: [{
+				xtype: 'textfield',
+				name: 'nickname',
+				label: 'Nickname'
+			}, {
+				xtype: 'textfield',
+				name: 'server',
+				label: 'Server',
+				value: 'http://localhost:3333'
+			}]
+		}, {
+			items: {
+				xtype: 'button',
+				centered: true,
+				ui: 'round confirm',
+				text: 'Start Chat',
+				itemId: 'start',
+				width: '50%'
+			}
+		}]
 	}
 });
