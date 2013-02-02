@@ -6,6 +6,7 @@ This app is purely for demonstration purposes, the chat even generates random ni
 
 ![](http://cl.ly/image/2W0y2j3n1r34/sencha-touch-chat-login-1.png) ![](http://cl.ly/image/2i3P1i2m411v/sencha-touch-chat-message-list.png)
 
+![](http://cl.ly/image/2b330W0f0O0P/node%20%20_private_var_www_sencha-touch-chat_nodejs%20—%20node%20—%20130×40.png)
 
 ## Installation
 
