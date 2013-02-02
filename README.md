@@ -1,10 +1,10 @@
 # sencha-touch-chat
 
-Example chat using [Sencha Touch 2.1](http://www.sencha.com/products/touch/ "Sencha Touch"), [NodeJS](http://nodejs.org/ "NodeJS") and [Socket.IO](http://socket.io/ "Socket.IO").
+Example chat application based on [Sencha Touch 2.1](http://www.sencha.com/products/touch/ "Sencha Touch"), [NodeJS](http://nodejs.org/ "NodeJS") and [Socket.IO](http://socket.io/ "Socket.IO").
 
-This is purely for demonstration purposes, the chat even generates random nicknames and messages to facilitate showing off simultaneous chat windows.
+This app is purely for demonstration purposes, the chat even generates random nicknames and messages to facilitate showing off simultaneous chat windows.
 
-![](http://cl.ly/image/24051c2e0a0O/Chat-2.png) ![](http://cl.ly/image/0z26451A3e2z/Chat-3.png)
+![](http://cl.ly/image/2W0y2j3n1r34/sencha-touch-chat-login-1.png) ![](http://cl.ly/image/2i3P1i2m411v/sencha-touch-chat-message-list.png)
 
 
 ## Installation
@@ -50,9 +50,12 @@ Clone repo to your apache document root.
 					version.txt
 
 
-The "touch" subfolder gets created via normal app generation process when using Sencha Cmd. For example:
+The "touch" subfolder was originally created via normal app generation process [using Sencha Cmd](http://docs.sencha.com/touch/2-1/#!/guide/command_app "Using Sencha Cmd with Sencha Touch"). This subfolder is not included with Sencha Touch Chat, you will need to recreate it by copying it from another application:
 
-	$ sencha generate app Chat /var/www/sencha-touch-chat
+	$ sencha generate app SomeOtherApplication /var/www/some-other-application
+	$ cp /var/www/some-other-application/touch /var/www/sencha-touch-chat
+
+Be sure to check your paths before running these copy commands!
 
 Sencha Cmd may tell you to upgrade:
 
