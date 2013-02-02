@@ -4,16 +4,46 @@
 // do not use in order to create a smaller css file.
 @include sencha-panel;
 @include sencha-buttons;
-@include sencha-sheet;
-@include sencha-picker;
-@include sencha-tabs;
+//@include sencha-sheet;
+//@include sencha-picker;
+//@include sencha-tabs;
 @include sencha-toolbar;
 @include sencha-toolbar-forms;
-@include sencha-indexbar;
+//@include sencha-indexbar;
 @include sencha-list;
 @include sencha-layout;
-@include sencha-carousel;
+//@include sencha-carousel;
 @include sencha-form;
 @include sencha-msgbox;
 
-// Your custom code goes here...
+.message {
+	white-space: normal; 
+	font-weight: normal;
+	text-align: left;
+	font-size: 80%;
+}
+
+.nick {
+	font-size: 70%; 
+	font-family: inconsolata,helvetica,sans-serif; 
+}
+
+.nick.local {
+	text-align: right;
+}
+
+.nick.remote {
+	text-align: left;
+}
+
+.x-button.local {
+	margin-left: 20%;
+}
+
+.x-button.remote {
+	margin-right: 20%;
+}
+
+.x-button.local p {
+	text-align: right;
+}
