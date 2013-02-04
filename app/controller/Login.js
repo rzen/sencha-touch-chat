@@ -41,3 +41,5 @@ Ext.define('Chat.controller.Login', {
 		this.getApplication().getController('MessageList').initSocketConnection();
 	}
 });
+
+// Ver: ?.?
