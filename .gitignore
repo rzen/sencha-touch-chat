@@ -3,7 +3,7 @@
 /archive
 .sass-cache
 /nodejs/node_modules
-/touch/sencha*.js
+/touch/sencha-touch-*.js
 /touch/packages
 /bootstrap.js
 /bootstrap.json
