@@ -1,8 +1,6 @@
 # sencha-touch-chat
 
-Example chat application based on [Sencha Touch 2.1](http://www.sencha.com/products/touch/ "Sencha Touch"), [NodeJS](http://nodejs.org/ "NodeJS") and [Socket.IO](http://socket.io/ "Socket.IO").
-
-This app is purely for demonstration purposes, the chat even generates random nicknames and messages to facilitate showing off simultaneous chat windows.
+Example chat application based on [Sencha Touch 2.3.1](http://www.sencha.com/products/touch/ "Sencha Touch"), [NodeJS](http://nodejs.org/ "NodeJS") and [Socket.IO](http://socket.io/ "Socket.IO").
 
 ![](https://github.com/rzen/sencha-touch-chat/blob/master/resources/Screenshots/Screenshot%20-%20Login.png?raw=true) ![](https://github.com/rzen/sencha-touch-chat/blob/master/resources/Screenshots/Screenshot%20-%20MessageList.png?raw=true)
 
@@ -24,51 +22,9 @@ In this README.md we'll assume that the location of this folder is /var/www. Nat
 Clone repo to your apache document root. 
 
 
-### Create subfolder "touch" and copy the following files from Sencha Touch 2.1:
+### Build the application
 
-	/var/
-		www/
-			sencha-touch-chat/			<-- will get created by git clone (see above)
-				app/
-				app.js
-				app.json
-				favicon.ico
-				index.html
-				nodejs/
-					ChatServer.js
-					node_modules/		<-- will get created by npm install socket.io
-				README.md
-				resources/
-				touch/					<-- create and populate manually from Sencha Touch 2.1 distro
-					cmd/
-					microloader/
-					resources/
-					sencha-touch-all-debug.js
-					sencha-touch-all.js
-					sencha-touch-debug.js
-					sencha-touch.js
-					src/
-					version.txt
-
-
-The "touch" subfolder was originally created via normal app generation process [using Sencha Cmd](http://docs.sencha.com/touch/2-1/#!/guide/command_app "Using Sencha Cmd with Sencha Touch"). This subfolder is not included with Sencha Touch Chat, you will need to recreate it by copying it from another application:
-
-	$ sencha generate app SomeOtherApplication /var/www/some-other-application
-	$ cp -R /var/www/link-mobile/chat/touch /var/www/sencha-touch-chat/touch
-
-Be sure to check your paths before running these copy commands!
-
-Sencha Cmd may tell you to upgrade:
-
-	$ sencha app build production
-	Sencha Cmd v3.0.2.288
-	[ERR]		The application was last modified by an older version of Sencha CMD (0.0.0.0).  Please run 'sencha app upgrade -noframework' to update.
-	[ERR]		Application cmd version incompatible with this one.
-
-
-Simply follow the instructions and perform upgrade:
-
-	$ sencha app upgrade -noframework
+	$ sencha app build
 
 
 ### Install NodeJS:
@@ -115,6 +71,11 @@ Here's how:
 Packaged code will be available in
 
 	/var/www/sencha-touch-chat/build/Chat/production
+
+
+## History
+
+Feb 2nd, 2014 Updated for Sencha Touch 2.3.1. Simplified installation. Enjoy!
 
 
 ## FAQ
