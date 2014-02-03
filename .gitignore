@@ -4,3 +4,7 @@
 /touch
 .sass-cache
 /nodejs/node_modules
+/touch/sencha*.js
+/touch/packages
+/bootstrap.js
+/bootstrap.json
