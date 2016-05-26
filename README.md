@@ -1,6 +1,6 @@
 # sencha-touch-chat
 
-Example chat application based on [Sencha Touch 2.3.1](http://www.sencha.com/products/touch/ "Sencha Touch"), [NodeJS](http://nodejs.org/ "NodeJS") and [Socket.IO](http://socket.io/ "Socket.IO").
+Example chat application based on [Sencha Touch 2.4.2](http://www.sencha.com/products/touch/ "Sencha Touch"), [NodeJS](http://nodejs.org/ "NodeJS") and [Socket.IO](http://socket.io/ "Socket.IO").
 
 ![](https://github.com/rzen/sencha-touch-chat/blob/master/resources/Screenshots/Screenshot%20-%20Login.png?raw=true) ![](https://github.com/rzen/sencha-touch-chat/blob/master/resources/Screenshots/Screenshot%20-%20MessageList.png?raw=true)
 
@@ -35,8 +35,8 @@ Example chat application based on [Sencha Touch 2.3.1](http://www.sencha.com/pro
 
 ## History
 
-May 26th, 2016 Updated for Cmd 6, simplified instructions. Enjoy!
-Feb 2nd, 2014 Updated for Sencha Touch 2.3.1. Simplified installation. Enjoy!
+- May 26th, 2016 Updated for Cmd 6, ST 2.4.2 and simplified instructions. Enjoy!
+- Feb 2nd, 2014 Updated for Sencha Touch 2.3.1. Simplified installation. Enjoy!
 
 ## Free to use
 
