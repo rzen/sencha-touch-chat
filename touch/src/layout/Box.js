@@ -1,15 +1,11 @@
 /**
- * @aside guide layouts
- * @aside video layouts
- *
  * Box is a superclass for the two box layouts:
  *
  * * {@link Ext.layout.HBox hbox}
  * * {@link Ext.layout.VBox vbox}
  *
  * Box itself is never used directly, but its subclasses provide flexible arrangement of child components
- * inside a {@link Ext.Container Container}. For a full overview of layouts check out the
- * [Layout Guide](#!/guide/layouts).
+ * inside a {@link Ext.Container Container}. 
  *
  * ## Horizontal Box
  *
@@ -23,13 +19,16 @@
  *
  * ## Vertical Box
  *
- * VBox allows you to easily lay out child components verticaly. It can size items based on a fixed height or a
+ * VBox allows you to easily lay out child components vertically. It can size items based on a fixed height or a
  * fraction of the total height available, enabling you to achieve flexible layouts that expand or contract to fill the
  * space available.
  *
  * {@img ../guides/layouts/vbox.jpg}
  *
  * See the {@link Ext.layout.VBox VBox layout docs} for more information on using vboxes.
+ *
+ * For a more detailed overview of Sencha Touch 2 layouts, check out the
+ * [Layout Guide](../../../core_concepts/layouts.html).
  */
 Ext.define('Ext.layout.Box', {
     extend: 'Ext.layout.Default',
@@ -46,7 +45,7 @@ Ext.define('Ext.layout.Box', {
          * - ** end ** : child items are packed together at right side of container
          * - **stretch** : child items are stretched vertically to fill the height of the container
          *
-         * Please see the 'Pack and Align' section of the [Layout guide](#!/guide/layouts) for a detailed example and
+         * Please see the 'Pack and Align' section of the [Events Guide](../../../core_concepts/events.html) for a detailed example and
          * explanation.
          * @accessor
          */
@@ -62,7 +61,7 @@ Ext.define('Ext.layout.Box', {
          * - ** end ** : child items are packed together at right side of container
          * - ** justify ** : child items are packed evenly across the container. Uses the 'justify-content: space-between' css property
          *
-         * Please see the 'Pack and Align' section of the [Layout guide](#!/guide/layouts) for a detailed example and
+         * Please see the 'Pack and Align' section of the [Events Guide](../../../core_concepts/events.html) for a detailed example and
          * explanation.
          * @accessor
          */

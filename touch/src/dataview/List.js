@@ -1,9 +1,6 @@
 /**
- * @aside guide list
- * @aside video list
- *
  * List is a custom styled DataView which allows Grouping, Indexing, Icons, and a Disclosure. See the
- * [Guide](#!/guide/list) and [Video](#!/video/list) for more.
+ * [Guide](../../../components/list.html) for more.
  *
  *     @example miniphone preview
  *     Ext.create('Ext.List', {
@@ -109,6 +106,9 @@
  *             text: 'Load More...'
  *         }]
  *     });
+ *
+ * ###Further Reading
+ * [Sencha Touch DataView Guide](../../../components/list.html)
  */
 Ext.define('Ext.dataview.List', {
     alternateClassName: 'Ext.List',
@@ -308,8 +308,6 @@ Ext.define('Ext.dataview.List', {
 
         minimumBufferDistance: 5,
 
-        useHeaders: true,
-
         /**
          * @cfg {Boolean} striped
          * Set this to true if you want the items in the list to be zebra striped, alternating their
@@ -350,6 +348,7 @@ Ext.define('Ext.dataview.List', {
     beforeInitialize: function() {
         var me = this,
             container = me.container,
+            baseCls = me.getBaseCls(),
             scrollable, scrollViewElement, pinnedHeader;
 
         Ext.apply(me, {
@@ -401,7 +400,7 @@ Ext.define('Ext.dataview.List', {
             translatable: {
                 translationMethod: this.translationMethod
             },
-            cls: ['x-list-header', 'x-list-header-swap']
+            cls: [baseCls + '-header', baseCls + '-header-swap']
         });
         pinnedHeader.translate(0, -10000);
         pinnedHeader.$position = -10000;
@@ -742,7 +741,7 @@ Ext.define('Ext.dataview.List', {
                     }
                 }
 
-                if (grouped && me.getUseHeaders() && me.headerIndices && me.headerIndices[item.$dataIndex]) {
+                if (grouped && me.headerIndices && me.headerIndices[item.$dataIndex]) {
                     item.getHeader().translate(0, transY);
                     transY += me.headerHeight;
                 }
@@ -810,7 +809,6 @@ Ext.define('Ext.dataview.List', {
             listItems = me.listItems,
             infinite = me.getInfinite(),
             scrollElement = me.scrollElement,
-            useHeaders = me.getUseHeaders(),
             item, header, itemCls;
 
         item = Ext.factory(config);
@@ -822,18 +820,16 @@ Ext.define('Ext.dataview.List', {
             item.addCls(itemCls);
         }
 
-        if (useHeaders) {
-            header = item.getHeader();
-            if (!infinite) {
-                header.addCls(itemCls);
-            } else {
-                header.setTranslatable({
-                    translationMethod: this.translationMethod
-                });
-                header.translate(0, -10000);
+        header = item.getHeader();
+        if (!infinite) {
+            header.addCls(itemCls);
+        } else {
+            header.setTranslatable({
+                translationMethod: this.translationMethod
+            });
+            header.translate(0, -10000);
 
-                scrollElement.insertFirst(header.renderElement);
-            }
+            scrollElement.insertFirst(header.renderElement);
         }
 
         container.doAdd(item);
@@ -885,12 +881,11 @@ Ext.define('Ext.dataview.List', {
             record = info.store.getAt(index),
             headerIndices = me.headerIndices,
             footerIndices = me.footerIndices,
-            useHeaders = me.getUseHeaders(),
-            header = useHeaders && item.getHeader(),
+            header = item.getHeader(),
             scrollDockItems = me.scrollDockItems,
             updatedItems = me.updatedItems,
             currentItemCls = item.renderElement.classList.slice(),
-            currentHeaderCls = useHeaders && header.renderElement.classList.slice(),
+            currentHeaderCls = header.renderElement.classList.slice(),
             infinite = me.getInfinite(),
             storeCount = info.store.getCount(),
             itemCls = [],
@@ -915,12 +910,10 @@ Ext.define('Ext.dataview.List', {
                 item.hide();
             }
 
-            if (useHeaders) {
-                if (infinite) {
-                    header.translate(0, -10000);
-                } else {
-                    header.hide();
-                }
+            if (infinite) {
+                header.translate(0, -10000);
+            } else {
+                header.hide();
             }
             item.$hidden = true;
             return;
@@ -976,7 +969,7 @@ Ext.define('Ext.dataview.List', {
             itemCls.push(info.selectedCls);
         }
 
-        if (info.grouped && useHeaders) {
+        if (info.grouped) {
             if (headerIndices[index]) {
                 itemCls.push(info.headerCls);
                 headerCls.push(info.headerCls);
@@ -999,7 +992,7 @@ Ext.define('Ext.dataview.List', {
             }
         }
 
-        if (!info.grouped && useHeaders) {
+        if (!info.grouped) {
             header.hide();
         }
 
@@ -1054,7 +1047,7 @@ Ext.define('Ext.dataview.List', {
             itemCls = Ext.Array.merge(itemCls, currentItemCls);
         }
 
-        if (useHeaders && currentHeaderCls) {
+        if (currentHeaderCls) {
             for (i = 0; i < headerRemoveCls.length; i++) {
                 Ext.Array.remove(currentHeaderCls, headerRemoveCls[i]);
             }
@@ -1068,9 +1061,7 @@ Ext.define('Ext.dataview.List', {
             item.classCache = classCache;
         }
 
-        if (useHeaders) {
-            header.renderElement.setCls(headerCls);
-        }
+        header.renderElement.setCls(headerCls);
     },
 
     updateAllListItems: function() {
@@ -1146,7 +1137,7 @@ Ext.define('Ext.dataview.List', {
                 // This is a private event used by some plugins
                 me.fireEvent('updatevisiblecount', this, me.visibleCount, currentVisibleCount);
             }
-        } else if (me.listItems.length && me.getUseHeaders() && me.getGrouped() && me.getPinHeaders()) {
+        } else if (me.listItems.length && me.getGrouped() && me.getPinHeaders()) {
             // Whenever the container resizes, headers might be in different locations. For this reason
             // we refresh the header position map
             me.updateHeaderMap();
@@ -1477,16 +1468,16 @@ Ext.define('Ext.dataview.List', {
         var me = this,
             store = me.getStore(),
             storeLn = store && store.getCount(),
-            groups = store.getGroups(),
+            groups = store.getGrouper() ? store.getGroups() : null,
             grouped = me.getGrouped(),
-            groupLn = groups.length,
             headerIndices = me.headerIndices = {},
             footerIndices = me.footerIndices = {},
-            i, previousIndex, firstGroupedRecord, storeIndex;
+            i, previousIndex, firstGroupedRecord, storeIndex, groupLn;
 
-        if (!grouped) {
+        if (!grouped || !groups) {
             return footerIndices;
         }
+        groupLn = groups.length;
         me.groups = groups;
 
         for (i = 0; i < groupLn; i++) {
@@ -1558,7 +1549,7 @@ Ext.define('Ext.dataview.List', {
         }
         else {
             item = me.listItems[index];
-            if (me.getUseHeaders() && item.getHeader().isPainted()) {
+            if (item.getHeader().isPainted()) {
                 offset = item.getHeader().renderElement.dom.offsetTop;
             }
             else {

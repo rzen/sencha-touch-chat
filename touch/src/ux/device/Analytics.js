@@ -5,7 +5,7 @@
  * 
  * @mixins Ext.ux.device.analytics.Abstract
  *
- * @aside guide native_apis
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
  */
 Ext.define('Ext.ux.device.Analytics', {
     singleton: true,

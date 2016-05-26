@@ -27,9 +27,9 @@
  *
  * See the documentation for {@link Ext.device.Camera#capture} all available configurations.
  *
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
+ * 
  * @mixins Ext.device.camera.Abstract
- *
- * @aside guide native_apis
  */
 Ext.define('Ext.device.Camera', {
     singleton: true,

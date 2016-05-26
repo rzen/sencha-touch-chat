@@ -145,7 +145,7 @@ Ext.define('Ext.MessageBox', {
             type: 'fadeOut'
         }
     }, {
-        theme: ['Blackberry'],
+        theme: ['Blackberry', 'Blackberry103'],
         ui: 'plain'
     }, {
         theme: ['MoutainView']
@@ -281,14 +281,14 @@ Ext.define('Ext.MessageBox', {
                     pack: 'center'
                 };
 
-                var isFlexed = Ext.theme.is.CupertinoClassic  || Ext.theme.is.MountainView  || Ext.theme.is.Blackberry;
+                var isFlexed = Ext.theme.is.CupertinoClassic  || Ext.theme.is.MountainView  || Ext.theme.is.Blackberry || Ext.theme.is.Blackberry103;
 
                 me.buttonsToolbar = Ext.create('Ext.Toolbar', {
                     docked: 'bottom',
                     defaultType: 'button',
                     defaults: {
                         flex: (isFlexed) ? 1 : undefined,
-                        ui: (Ext.theme.is.Blackberry) ? 'action' : undefined
+                        ui: (Ext.theme.is.Blackberry || Ext.theme.is.Blackberry103) ? 'action' : undefined
                     },
                     layout: layout,
                     ui: me.getUi(),

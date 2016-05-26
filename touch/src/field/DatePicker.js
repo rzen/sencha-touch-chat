@@ -1,6 +1,4 @@
 /**
- * @aside guide forms
- *
  * This is a specialized field which shows a {@link Ext.picker.Date} when tapped. If it has a predefined value,
  * or a value is selected in the {@link Ext.picker.Date}, it will be displayed like a normal {@link Ext.field.Text}
  * (but not selectable/changable).
@@ -12,6 +10,8 @@
  *
  * {@link Ext.field.DatePicker} fields are very simple to implement, and have no required configurations.
  *
+ * For more information regarding forms and fields, please review [Using Forms in Sencha Touch Guide](../../../components/forms.html)
+ * 
  * ## Examples
  *
  * It can be very useful to set a default {@link #value} configuration on {@link Ext.field.DatePicker} fields. In

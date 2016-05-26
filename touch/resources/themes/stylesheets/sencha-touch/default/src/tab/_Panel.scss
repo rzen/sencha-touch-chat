@@ -16,6 +16,11 @@ $tabs-top-icon-size: $tabs-top-height - .6em;
     @include opacity(.7);
 }
 
+//Custom fonts in older android do not work with text-rendering set to optimizeLegibility
+.x-android-4.x-android-stock .x-tabbar .x-tab .x-button-label {
+	text-rendering: inherit !important;
+}
+
 @mixin sencha-top-tabs {
     .x-tabbar.x-docked-top {
         height: $global-row-height;

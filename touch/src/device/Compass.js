@@ -30,9 +30,9 @@
  *         }
  *     });
  *
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
+ * 
  * @mixins Ext.device.compass.Abstract
- *
- * @aside guide native_apis
  */
 Ext.define('Ext.device.Compass', {
     singleton: true,

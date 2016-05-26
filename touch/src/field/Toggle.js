@@ -1,6 +1,4 @@
 /**
- * @aside guide forms
- *
  * Specialized {@link Ext.field.Slider} with a single thumb which only supports two {@link #value values}.
  *
  * ## Examples
@@ -50,6 +48,8 @@
  *             ]
  *         }
  *     ]);
+ *
+ * For more information regarding forms and fields, please review [Using Forms in Sencha Touch Guide](../../../components/forms.html)
  */
 Ext.define('Ext.field.Toggle', {
     extend: 'Ext.field.Slider',
@@ -89,7 +89,7 @@ Ext.define('Ext.field.Toggle', {
         theme: ['Windows'],
         labelAlign: 'left'
     }, {
-        theme: ['Blackberry', 'MountainView'],
+        theme: ['Blackberry', 'Blackberry103', 'MountainView'],
         activeLabel: 'On',
         inactiveLabel: 'Off'
     }],

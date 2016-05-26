@@ -7,7 +7,7 @@
 Ext.define('Ext.viewport.Viewport', {
     requires: [
         'Ext.viewport.Ios',
-        'Ext.viewport.Android',
+        'Ext.viewport.AndroidStock',
         'Ext.viewport.WindowsPhone'
     ],
 
@@ -17,7 +17,7 @@ Ext.define('Ext.viewport.Viewport', {
 
         switch (osName) {
             case 'Android':
-                viewportName = (Ext.browser.name == 'ChromeMobile') ? 'Default' : 'Android';
+                viewportName = (Ext.browser.name == 'ChromeMobile') ? 'Default' : 'AndroidStock';
                 break;
 
             case 'iOS':

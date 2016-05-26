@@ -13,6 +13,7 @@ Ext.define('Chat.view.Login', {
 		title: 'Login',
 		disableSelection: true,
 		items: [{
+			layout: 'fit',
 			xtype: 'fieldset',
 			title: 'User',
 			instructions: 'Chat Demo.',

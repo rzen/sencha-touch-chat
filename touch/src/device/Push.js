@@ -24,17 +24,15 @@
  *
  * Currently only available on iOS for apps packaged with Sencha Cmd.
  *
- *
  * ## Cordova / PhoneGap
  *
  * For apps packaged with Cordova or PhoneGap, Ext.device.Push currently supports iOS and Android via the [PushPlugin](https://github.com/phonegap-build/PushPlugin).
  *
  * Be sure to include that plugin in your project; Ext.device.Push simply normalizes the interface for using notifications in a Sencha Touch application.
  *
- *
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
+ * 
  * @mixins Ext.device.push.Abstract
- *
- * @aside guide native_apis
  */
 Ext.define('Ext.device.Push', {
     singleton: true,

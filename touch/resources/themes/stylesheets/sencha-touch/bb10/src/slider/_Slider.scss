@@ -1,15 +1,18 @@
 .x-slider {
-    height: 40px;
+    height: 3em;
 
     overflow: hidden;
     @include border-radius(5px);
+		& > * {
+			top: .25em;
+		}
 
     &:before {
         top: 16px;
         @include background(linear-gradient(color-stops(#dadada, #e1e1e1)));
         @include box-shadow(inset 0 2px 2px rgba(#000, .1));
         border: 1px solid #ccc;
-        margin: 0;
+        margin: .25em 0 0 0;
     }
 
     .x-thumb {
@@ -35,6 +38,23 @@
             }
         }
     }
+
+	.x-thumb-pressing {
+		&:after {
+			@include background(linear-gradient(color-stops(#3595CC, #0678C4)));
+			border: 0;
+			@include box-shadow(none);
+		};
+		.x-thumb-inner {
+			@include background-image(radial-gradient(center, ellipse cover, rgba(0,0,0,0) 40%, #0678C4 100%));
+			width: 3em;
+			height: 3em;
+			position: absolute;
+			top: -.5em;
+			left: -.5em;
+			border-radius: 3em;
+		}
+	}
 }
 
 .x-toggle,

@@ -1,5 +1,4 @@
 /**
- * @aside example video
  * Provides a simple Container for HTML5 Video.
  *
  * ## Notes
@@ -58,7 +57,13 @@ Ext.define('Ext.Video', {
          * @cfg
          * @inheritdoc
          */
-        baseCls: Ext.baseCSSPrefix + 'video'
+        baseCls: Ext.baseCSSPrefix + 'video',
+
+        /**
+         * @cfg {Boolean} controls
+         * Determines if native controls should be shown for this video player.
+         */
+        controls: true
     },
 
     template: [{
@@ -128,6 +133,10 @@ Ext.define('Ext.Video', {
         if (me.isPlaying()) {
             me.play();
         }
+    },
+
+    updateControls: function(value) {
+        this.media.set({controls:value ? true : undefined});
     },
 
     onErased: function() {

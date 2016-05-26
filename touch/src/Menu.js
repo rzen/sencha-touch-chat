@@ -125,7 +125,7 @@ Ext.define('Ext.Menu', {
     platformConfig: [{
         theme: ['Windows']
     }, {
-        theme: ['Blackberry'],
+        theme: ['Blackberry', 'Blackberry103'],
         ui: 'context',
         layout: {
             pack: 'center'
@@ -135,7 +135,7 @@ Ext.define('Ext.Menu', {
     updateUi: function(newUi, oldUi) {
         this.callParent(arguments);
 
-        if (newUi != oldUi && Ext.theme.is.Blackberry) {
+        if (newUi != oldUi && (Ext.theme.is.Blackberry || Ext.theme.is.Blackberry103)) {
             if (newUi == 'context') {
                 this.innerElement.swapCls('x-vertical', 'x-horizontal');
             }

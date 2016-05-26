@@ -49,7 +49,8 @@
  *  Applications that need compatibility with ##Older Android## devices will want to see the {@link #layout} config for details on
  *  disabling navigation view animations as these devices have poor animation support and performance.
  *
- * @aside guide navigation_view
+ * ###Further Reading
+ * [Sencha Touch Navigation View Guide](../../../components/navigation_view.html)
  */
 Ext.define('Ext.navigation.View', {
     extend: 'Ext.Container',
@@ -173,7 +174,7 @@ Ext.define('Ext.navigation.View', {
      */
 
     platformConfig: [{
-        theme: ['Blackberry'],
+        theme: ['Blackberry', 'Blackberry103'],
         navigationBar: {
             splitNavigation: true
         }
@@ -363,8 +364,66 @@ Ext.define('Ext.navigation.View', {
         }
     },
 
+    /**
+     * This is called when an Item is added to the BackButtonContainer of a SplitNavigation View
+     * @private
+     *
+     * @param toolbar
+     * @param item
+     */
+    onBackButtonContainerAdd: function(toolbar, item) {
+        item.on({
+            scope: this,
+            show: this.refreshBackButtonContainer,
+            hide: this.refreshBackButtonContainer
+        });
+        this.refreshBackButtonContainer();
+    },
+
+    /**
+     * This is called when an Item is removed from the BackButtonContainer of a SplitNavigation View
+     * @private
+     *
+     * @param toolbar
+     * @param item
+     */
+    onBackButtonContainerRemove: function(toolbar, item) {
+        item.un({
+            scope: this,
+            show: this.refreshBackButtonContainer,
+            hide: this.refreshBackButtonContainer
+        });
+        this.refreshBackButtonContainer();
+    },
+
+    /**
+     * This is used for Blackberry SplitNavigation to monitor the state of child items in the bottom toolbar.
+     * if no visible children exist the toolbar will be hidden
+     * @private
+     */
+    refreshBackButtonContainer: function() {
+        if (!this.$backButtonContainer) {
+            return;
+        }
+        var i = 0,
+            backButtonContainer = this.$backButtonContainer,
+            items = backButtonContainer.items,
+            item;
+
+        for(;i < items.length; i++) {
+            item = items.get(i);
+            if(!item.isHidden()) {
+                this.$backButtonContainer.show();
+                return;
+            }
+        }
+
+        this.$backButtonContainer.hide();
+    },
+
     // @private
     applyNavigationBar: function(config) {
+        var me = this;
         if (!config) {
             config = {
                 hidden: true,
@@ -376,13 +435,14 @@ Ext.define('Ext.navigation.View', {
             delete config.title;
             //<debug>
             Ext.Logger.warn("Ext.navigation.View: The 'navigationBar' configuration does not accept a 'title' property. You " +
-                            "set the title of the navigationBar by giving this navigation view's children a 'title' property.");
+                "set the title of the navigationBar by giving this navigation view's children a 'title' property.");
             //</debug>
         }
 
         config.view = this;
         config.useTitleForBackButtonText = this.getUseTitleForBackButtonText();
-
+        
+        // Blackberry specific nav setup where title is on the top title bar and the bottom toolbar is used for buttons and BACK
         if (config.splitNavigation) {
             this.$titleContainer = this.add({
                 docked: 'top',
@@ -393,10 +453,19 @@ Ext.define('Ext.navigation.View', {
 
             var containerConfig = (config.splitNavigation === true) ? {} : config.splitNavigation;
 
-            this.$backButtonContainer = this.add(Ext.apply({
+            this.$backButtonContainer = this.add({
                 xtype: 'toolbar',
-                docked: 'bottom'
-            }, containerConfig));
+                docked: 'bottom',
+                hidden: true
+            });
+
+            // Any item that is added to the BackButtonContainer should be monitored for visibility
+            // this will allow the toolbar to be hidden when no items exist in it.
+            this.$backButtonContainer.on ({
+                scope: me,
+                add: me.onBackButtonContainerAdd,
+                remove: me.onBackButtonContainerRemove
+            });
 
             this.$backButton = this.$backButtonContainer.add({
                 xtype: 'button',
@@ -404,6 +473,16 @@ Ext.define('Ext.navigation.View', {
                 hidden: true,
                 ui: 'back'
             });
+
+            // Default config items go into the bottom bar
+            if(config.items) {
+                this.$backButtonContainer.add(config.items);
+            }
+
+            // If the user provided items and splitNav items, default items go into the bottom bar, split nav items go into the top
+            if(containerConfig.items) {
+                this.$titleContainer.add(containerConfig.items);
+            }
 
             this.$backButton.on({
                 scope: this,

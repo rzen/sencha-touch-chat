@@ -164,7 +164,7 @@ Ext.define('Ext.TitleBar', {
     },
 
     platformConfig: [{
-        theme: ['Blackberry', 'Tizen'],
+        theme: ['Blackberry', 'Blackberry103', 'Tizen'],
         titleAlign: 'left'
     }, {
         theme: ['Cupertino'],

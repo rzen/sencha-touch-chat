@@ -8,8 +8,8 @@
  * will need to be made to use this plugin.
  *
  * http://docs.phonegap.com/en/2.6.0/cordova_splashscreen_splashscreen.md.html#Splashscreen
- *
- * @aside guide native_apis
+ * 
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
  */
 Ext.define('Ext.device.Splashscreen', {
     singleton: true,

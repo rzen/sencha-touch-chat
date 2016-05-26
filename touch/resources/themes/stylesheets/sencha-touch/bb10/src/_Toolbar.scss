@@ -19,23 +19,23 @@
 
 .x-toolbar-light,
 .x-tabbar-light {
-    @include background(linear-gradient(top, color-stops(#20abe0, #197aba)));
+    @include background(radial-gradient(left top, circle farthest-side, color-stops(#0074BB, #0CA2D3)));
 }
 
 .x-toolbar-neutral,
 .x-tabbar-neutral {
     @include background(linear-gradient(color-stops(#FAFAFA, #D5D5D5)));
-		.x-title {
-			color: #333333;
-		}
+    .x-title {
+        color: #333333;
+    }
 }
 
 .x-toolbar-dark,
 .x-tabbar-dark {
     @include background(linear-gradient(color-stops(#323232, #272727)));
 
-    .x-landscape &.x-docked-bottom {
-        height: 66px;
+    .x-landscape &.x-docked-bottom, .x-bb-keyboard &.x-docked-bottom {
+        height: 50px;
     }
 }
 
@@ -51,7 +51,7 @@
     .x-button-pressed {
         .x-button-icon:before {
             color: #fff;
-        }        
+        }
     }
 }
 
@@ -81,9 +81,8 @@
     color: #fafafa;
     font-size: 20px;
     font-weight: normal;
-		letter-spacing: 1px;
+    letter-spacing: 1px;
 }
-
 
 .x-toolbar {
     .x-field-focused .x-input-el {

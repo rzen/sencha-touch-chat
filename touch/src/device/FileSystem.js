@@ -1,9 +1,9 @@
 /**
  * Provides an API to navigate file system hierarchies.
  *
- * @mixins Ext.device.filesystem.Sencha
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
  *
- * @aside guide native_apis
+ * @mixins Ext.device.filesystem.Sencha
  */
 Ext.define('Ext.device.FileSystem', {
     singleton: true,

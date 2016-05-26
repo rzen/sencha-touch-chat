@@ -6,12 +6,12 @@
     margin: .5em .5em 1.5em;
 
     .x-form-label {
-        border-top: 1px solid lighten($form-light, 20%);
+        border-top: $form-field-label-border-top-width solid $form-field-label-border-top-color;
     }
 
     .x-form-fieldset-inner {
-        border: 1px solid $form-light;
-        background: #fff;
+        border: $form-fieldset-border-width solid $form-fieldset-border-color;
+        background: $form-field-bg-color;
         padding: 0;
         @if $include-border-radius {
             @include border-radius($form-fieldset-radius);
@@ -20,7 +20,7 @@
 
     //Ext.field.Field
     .x-field {
-        border-bottom: 1px solid $form-light;
+        border-bottom: $form-field-border-bottom-width solid $form-field-border-bottom-color;
         background: transparent;
 
         &:first-child {
@@ -40,14 +40,18 @@
 }
 
 .x-form-fieldset-title {
-    @include label();
+    @if $form-fieldset-title-text-shadow {
+        @include label();
+    }
     margin: 1em ( $form-spacing + .1em ) .3em;
-    color: $form-dark;
+    color: $form-fieldset-title-color;
 }
 
 .x-form-fieldset-instructions {
-    @include label();
-    color: lighten($form-dark, 30%);
+    @if $form-fieldset-title-text-shadow {
+        @include label();
+    }
+    color: lighten($form-fieldset-title-color, 30%);
     margin: 1em ( $form-spacing + .1em ) .3em;
     font-size: .8em;
 }

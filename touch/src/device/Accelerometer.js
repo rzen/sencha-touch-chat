@@ -36,9 +36,9 @@
  *         }
  *     });
  *
- * @mixins Ext.device.accelerometer.Abstract
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
  *
- * @aside guide native_apis
+ * @mixins Ext.device.accelerometer.Abstract
  */
 Ext.define('Ext.device.Accelerometer', {
     singleton: true,

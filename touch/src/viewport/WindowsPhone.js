@@ -35,27 +35,5 @@ Ext.define('Ext.viewport.WindowsPhone', {
         document.body.addEventListener('onselectstart', preventSelection);
 
         this.callParent(arguments);
-    },
-
-    supportsOrientation: function() {
-        return false;
-    },
-
-    onResize: function() {
-        this.waitUntil(function() {
-            var oldWidth = this.windowWidth,
-                oldHeight = this.windowHeight,
-                width = this.getWindowWidth(),
-                height = this.getWindowHeight(),
-                currentOrientation = this.getOrientation(),
-                newOrientation = this.determineOrientation();
-
-            return ((oldWidth !== width && oldHeight !== height) && currentOrientation !== newOrientation);
-        }, function() {
-            var currentOrientation = this.getOrientation(),
-                newOrientation = this.determineOrientation();
-            this.fireOrientationChangeEvent(newOrientation, currentOrientation);
-
-        }, Ext.emptyFn, 250);
     }
 });

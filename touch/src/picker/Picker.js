@@ -1,5 +1,4 @@
 /**
- * @aside example pickers
  * A general picker class. {@link Ext.picker.Slot}s are used to organize multiple scrollable slots into a single picker. {@link #slots} is
  * the only necessary configuration.
  *

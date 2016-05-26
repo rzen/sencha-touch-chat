@@ -39,6 +39,7 @@ Ext.define('Ext.plugin.PullRefresh', {
     requires: ['Ext.DateExtras'],
 
     config: {
+        width: '100%',
         /**
          * @cfg {Ext.dataview.List} list
          * The list to which this PullRefresh plugin is connected.

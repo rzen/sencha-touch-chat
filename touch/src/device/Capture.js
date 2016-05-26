@@ -1,9 +1,9 @@
 /**
  * Provides access to the audio and video capture capabilities of the device.
  *
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
+ * 
  * @mixins Ext.device.capture.Abstract
- *
- * @aside guide native_apis
  */
 Ext.define('Ext.device.Capture', {
     singleton: true,

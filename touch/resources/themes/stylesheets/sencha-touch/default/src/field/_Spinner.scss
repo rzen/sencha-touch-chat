@@ -5,7 +5,7 @@
 .x-spinner {
     .x-field-input {
         .x-input-el {
-            -webkit-text-fill-color: #000;
+            -webkit-text-fill-color: $form-field-color;
         }
     }
 
@@ -19,7 +19,7 @@
             color: #aaa !important;
         }
     }
-    
+
     .x-spinner-button {
         margin-top: .25em;
         margin-bottom: .25em;

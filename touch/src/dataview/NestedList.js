@@ -79,9 +79,9 @@
  *          store: store
  *      });
  *
- * @aside guide nested_list
- * @aside example nested-list
- * @aside example navigation-view
+ *
+ * ###Further Reading
+ * [Sencha Touch Nested List Guide](../../../components/nested_list.html)
  */
 Ext.define('Ext.dataview.NestedList', {
     alternateClassName: 'Ext.NestedList',
@@ -217,7 +217,7 @@ Ext.define('Ext.dataview.NestedList', {
          * A detailContainer is a reference to the container where a detail card
          * displays.
          *
-         * See http://docs.sencha.com/touch/2-2/#!/guide/nested_list-section-4
+         * See [Sencha Touch Nested List Guide](../../../components/nested_list.html)
          * and http://en.wikipedia.org/wiki/Miller_columns
          *
          * The two possible values for a detailContainer are undefined (default),
@@ -251,7 +251,7 @@ Ext.define('Ext.dataview.NestedList', {
          * about the item in the list. The detailCard lists the information at
          * the leaf.
          *
-         * See http://docs.sencha.com/touch/2-2/#!/guide/nested_list-section-3
+         * See [Sencha Touch Nested List Guide](../../../components/nested_list.html)
          * and http://en.wikipedia.org/wiki/Miller_columns
          *
          * @accessor
@@ -317,7 +317,7 @@ Ext.define('Ext.dataview.NestedList', {
             updateTitleText: false
         },
         {
-            theme: ['Blackberry'],
+            theme: ['Blackberry', 'Blackberry103'],
             toolbar: {
                 splitNavigation: true
             }

@@ -52,40 +52,42 @@
             color: #fff;
         }
 
-        .x-column-options-sortablehandle,
-        .x-column-options-visibleindicator,
-        .x-column-options-folder,
-        .x-column-options-leaf {
-        	color: #C0C0C0;
-        }
-
         .x-column-options-sortablehandle {
             color: #aaa;
         }
 
         .x-column-options-text {
+            color: #000;
+        }
+
+        .x-list-item.x-list-item-tpl {
+            border-top-color: #ccc;
+        }
+
+        .x-column-options-visibleindicator {
+            color: #1464AE;
+        }
+
+        .x-column-options-groupindicator {
             color: #C0C0C0;
         }
 
-        .x-list-item.x-item-selected.x-list-item-tpl  {
-            border-top-color: #ccc;
+        .x-column-options-folder,
+        .x-column-options-leaf {
+            color: #91E698;
+        }
 
-            .x-column-options-text {
-                color: #000;
+        .x-column-options-hidden {
+            .x-column-options-visibleindicator,
+            .x-column-options-text,
+            .x-column-options-folder,
+            .x-column-options-leaf {
+                color: #C0C0C0;
             }
+        }
 
-            .x-column-options-visibleindicator:after {
-                color: #1464AE;
-            }
-
-            .x-column-options-sortablehandle:after {
-                color: #aaa;
-            }
-
-            .x-column-options-folder:after,
-            .x-column-options-leaf:after {
-                color: #91E698;
-            }
+        .x-column-options-grouped .x-column-options-groupindicator {
+            color: #1464AE;
         }
     }
 
@@ -120,5 +122,14 @@
         .x-grid-cell {
             border-color: #C0C0C0;
         }
+    }
+
+    .x-grid-header {
+        @include background-gradient($grid-header-bg-color, $grid-header-gradient);
+        @include color-by-background($grid-header-bg-color, 30%);
+        @include bevel-by-background($grid-header-bg-color);
+        border-top: 1px solid $grid-header-bg-color;
+        border-bottom: 1px solid darken($grid-header-bg-color, 20%);
+        padding: 0 1.02em;
     }
 }

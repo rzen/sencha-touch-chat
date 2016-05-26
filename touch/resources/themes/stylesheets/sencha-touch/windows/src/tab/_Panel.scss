@@ -2,6 +2,11 @@
  * @class Ext.tab.Bar
  */
 
+//Custom fonts in older android do not work with text-rendering set to optimizeLegibility
+.x-android-4.x-android-stock .x-tab .x-button-label {
+	text-rendering: inherit !important;
+}
+
 // Tabs
 .x-tab {
     background-color: transparent;
@@ -86,6 +91,11 @@
         .x-button-label {
             font-size: 12px;
             padding-top: 7px;
+        }
+
+        .x-badge {
+          padding-top: 3px;
+          padding-bottom: 3px;
         }
 
         .x-button-icon {
@@ -208,6 +218,10 @@
     .x-tab {
         .x-button-label {
             color: #000;
+        }
+
+        .x-badge {
+          color: #fff;
         }
 
         .x-button-icon {

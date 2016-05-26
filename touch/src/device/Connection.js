@@ -31,9 +31,9 @@
  * - {@link Ext.device.Connection#CELL_4G CELL_4G} - Cell 4G connection
  * - {@link Ext.device.Connection#NONE NONE} - No network connection
  *
- * @mixins Ext.device.connection.Abstract
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
  *
- * @aside guide native_apis
+ * @mixins Ext.device.connection.Abstract
  */
 Ext.define('Ext.device.Connection', {
     singleton: true,

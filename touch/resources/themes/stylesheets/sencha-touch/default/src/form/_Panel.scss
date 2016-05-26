@@ -22,7 +22,8 @@
     @include label();
     @include bevel-text('light');
     padding: $form-spacing;
-    background-color: $form-label-background-color;
+    background-color: $form-field-label-bg-color;
+    color: $form-field-label-color;
 
     span {
         font-size: .8em;

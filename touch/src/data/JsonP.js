@@ -1,5 +1,4 @@
 /**
- * @aside guide ajax
  * @singleton
  *
  * This class is used to create JsonP requests. JsonP is a mechanism that allows for making requests for data cross
@@ -46,6 +45,14 @@
  *     });
  *
  * See the {@link #request} method for more details on making a JsonP request.
+ *
+ * ###Further Reading
+ * [Sencha Touch AJAX Guide](../../../core_concepts/using_ajax.html)
+ * [Sencha Touch Data Overview](../../../core_concepts/data/data_package_overview.html)
+ * [Sencha Touch Store Guide](../../../core_concepts/data/stores.html)
+ * [Sencha Touch Models Guide](../../../core_concepts/data/models.html)
+ * [Sencha Touch Proxy Guide](../../../core_concepts/data/proxies.html)
+ * 
  */
 Ext.define('Ext.data.JsonP', {
     alternateClassName: 'Ext.util.JSONP',

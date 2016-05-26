@@ -85,7 +85,6 @@
  *             }
  *         ]
  *     });
- * @aside example audio
  */
 Ext.define('Ext.Audio', {
     extend: 'Ext.Media',

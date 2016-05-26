@@ -78,7 +78,7 @@ Ext.define('Ext.ux.TabMenuButton', {
     },
 
     onMenuButtonTap: function(button) {
-        if (button) {
+        if (button && !Ext.theme.is.Blackberry103) {
             this.setText(button.getText());
             this.setIconCls(button.getIconCls());
         }

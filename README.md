@@ -6,82 +6,37 @@ Example chat application based on [Sencha Touch 2.3.1](http://www.sencha.com/pro
 
 ![](https://github.com/rzen/sencha-touch-chat/blob/master/resources/Screenshots/Screenshot%20-%20node%20ChatServer.js.png?raw=true)
 
-## Installation
 
-### Go to your webserver's document root:
+## Getting Started
 
-	$ cd /var/www
+### Clone the project
 
-In this README.md we'll assume that the location of this folder is /var/www. Naturally it will vary.
+	$ git clone https://github.com/rzen/sencha-touch-chat
 
+### Install Socket.IO and start chat server
 
-### Clone this project from GitHub:
-
-	$ git clone https://github.com/rzen/sencha-touch-chat.git
-
-Clone repo to your apache document root. 
-
-
-### Build the application
-
-	$ sencha app build
-
-
-### Install NodeJS:
-
-Download from http://nodejs.org/download/ and follow download and installation instructions.
-
-
-### Install Socket.IO:
-
-	$ cd /var/www/sencha-touch-chat/nodejs
+	$ cd sencha-touch-chat/nodejs
 	$ npm install socket.io
+	$ node ChatServer.js &
 
+### Build sencha touch app & start it
 
-## Running chat server
+	$ cd ..
+	$ sencha app build
+ 	$ sencha web -p 8888 start
 
-This project uses nodejs as its chat server. Server code is located in nodejs/ChatServer.js.
+### Access the chat application at
 
-To start chat server:
+	http://localhost:8888/
 
-	$ node ChatServer.js
+### To stop chat server
 
-
-## Customization
-
-This project uses http://localhost for the app itself and http://localhost:3333 as WebSocket port. This is hardcoded in the following files;
-
-	index.html
-	app.json
-	app/view/Login.js
-	nodejs/ChatServer.js
-
-
-## Using Sencha Cmd
-
-As is the project runs in "development mode." Which means individual classes get loaded separately. 
-
-Using Sencha Cmd to compile project takes load time for this app from roughly 10 seconds to under 1. 
-
-Here's how:
-
-	$ cd /var/www
-	$ sencha app build production
-
-Packaged code will be available in
-
-	/var/www/sencha-touch-chat/build/Chat/production
-
+	$ pkill node
 
 ## History
 
+May 26th, 2016 Updated for Cmd 6, simplified instructions. Enjoy!
 Feb 2nd, 2014 Updated for Sencha Touch 2.3.1. Simplified installation. Enjoy!
-
-
-## FAQ
-
-Be the first to contribute an FAQ.
-
 
 ## Free to use
 

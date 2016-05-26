@@ -1,9 +1,7 @@
 /**
- *
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
  *
  * @mixins Ext.device.purchases.Sencha
- *
- * @aside guide native_apis
  */
 Ext.define('Ext.device.Purchases', {
     singleton: true,

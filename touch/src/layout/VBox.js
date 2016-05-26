@@ -1,7 +1,4 @@
 /**
- * @aside guide layouts
- * @aside video layouts
- *
  * The VBox (short for vertical box) layout makes it easy to position items horizontally in a
  * {@link Ext.Container Container}. It can size items based on a fixed height or a fraction of the total height
  * available.
@@ -61,8 +58,8 @@
  *
  * {@img ../guides/layouts/vboxfixed.jpg}
  *
- * For a more detailed overview of what layouts are and the types of layouts shipped with Sencha Touch 2, check out the
- * [Layout Guide](#!/guide/layouts).
+ * For a more detailed overview of Sencha Touch 2 layouts, check out the
+ * [Layout Guide](../../../core_concepts/layouts.html).
  *
  */
 Ext.define('Ext.layout.VBox', {

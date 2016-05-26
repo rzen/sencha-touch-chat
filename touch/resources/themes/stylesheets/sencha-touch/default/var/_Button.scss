@@ -37,3 +37,21 @@ $include-button-uis: $include-default-uis !default;
  * @var {boolean} $include-button-highlights Optionally disable special CSS3 effects on buttons including gradients, text-shadows, and box-shadows.
  */
 $include-button-highlights: $include-highlights !default;
+
+/**
+ * @var {font-family} $button-font-family
+ * The font-family to be used for the buttons.
+ */
+$button-font-family: $font-family !default;
+
+/**
+ * @var {measurement} $button-font-size
+ * Size of the font used for the buttons.
+ */
+$button-font-size: 1em !default;
+
+/**
+ * @var {measurement} $button-line-height
+ * Size of the lines for the text inside the buttons. Adjusts button height.
+ */
+$button-line-height: 1.2em !default;

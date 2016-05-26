@@ -14,15 +14,7 @@ Ext.define('Ext.util.SizeMonitor', {
         if (Ext.browser.is.Firefox) {
             return new namespace.OverflowChange(config);
         }
-        else if (Ext.browser.is.WebKit) {
-            if (!Ext.browser.is.Silk && Ext.browser.engineVersion.gtEq('535')) {
-                return new namespace.OverflowChange(config);
-            }
-            else {
-                return new namespace.Scroll(config);
-            }
-        }
-        else if (Ext.browser.is.IE11) {
+        else if (Ext.browser.is.WebKit || Ext.browser.is.IE11) {
             return new namespace.Scroll(config);
         }
         else {

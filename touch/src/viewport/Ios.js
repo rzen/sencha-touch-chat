@@ -27,7 +27,7 @@ Ext.define('Ext.viewport.Ios', {
         }
 
         var stretchHeights = this.stretchHeights,
-            orientation = this.orientation,
+            orientation = this.getOrientation(),
             currentHeight = this.getWindowHeight(),
             height = stretchHeights[orientation];
 
@@ -70,7 +70,8 @@ Ext.define('Ext.viewport.Ios', {
     },
 
     getScreenHeight: function() {
-        return window.screen[this.orientation === this.PORTRAIT ? 'height' : 'width'];
+        var orientation = this.getOrientation();
+        return window.screen[orientation === this.PORTRAIT ? 'height' : 'width'];
     },
 
     onElementFocus: function() {
@@ -170,11 +171,13 @@ Ext.define('Ext.viewport.Ios', {
                 },
 
                 getWindowHeight: function() {
-                    return this.stretchHeights[this.orientation];
+                    var orientation = this.getOrientation();
+                    return this.stretchHeights[orientation];
                 },
 
                 getWindowWidth: function() {
-                    return this.stretchWidths[this.orientation];
+                    var orientation = this.getOrientation();
+                    return this.stretchWidths[orientation];
                 },
 
                 setViewportSizeToAbsolute: function() {

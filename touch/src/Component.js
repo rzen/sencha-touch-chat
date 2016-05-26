@@ -141,7 +141,7 @@
  * ### Common xtypes
  *
  * These are the xtypes that are most commonly used. For an exhaustive list please see the
- * [Components Guide](#!/guide/components).
+ * [Components Guide](../../../core_concepts/components.html).
  *
  * <pre>
  xtype                   Class
@@ -222,11 +222,8 @@
  *
  * ## Further Reading
  *
- * See the [Component & Container Guide](#!/guide/components) for more information, and check out the
+ * See the [Component & Container Guide](../../../core_concepts/components.html) for more information, and check out the
  * {@link Ext.Container} class docs also.
- *
- * @aside guide components
- * @aside guide events
  *
  */
 Ext.define('Ext.Component', {
@@ -1363,11 +1360,22 @@ Ext.define('Ext.Component', {
     },
 
     /**
-     * @private
+     * Add or removes a class based on if the class is already added to the Component.
+     *
+     * @param {String} className The class to toggle.
      * @chainable
      */
-    toggleCls: function(className, force) {
-        this.element.toggleCls(className, force);
+    toggleCls: function(className, /* private */ force) {
+        var oldCls = this.getCls(),
+            newCls = (oldCls) ? oldCls.slice() : [];
+
+        if (force || newCls.indexOf(className) == -1) {
+            newCls.push(className);
+        } else {
+            Ext.Array.remove(newCls, className);
+        }
+
+        this.setCls(newCls);
 
         return this;
     },
@@ -2930,13 +2938,6 @@ Ext.define('Ext.Component', {
                 //</debug>
                 this.initComponent();
             }
-
-            if (this.setOrientation !== emptyFn) {
-                //<debug warn>
-                Ext.Logger.deprecate("setOrientation() is deprecated", this);
-                //</debug>
-                this.setOrientation();
-            }
         },
 
         onRender: emptyFn,
@@ -2946,8 +2947,6 @@ Ext.define('Ext.Component', {
         initEvents: emptyFn,
 
         initComponent: emptyFn,
-
-        setOrientation: emptyFn,
 
         show: function() {
             if (this.renderElement.dom) {

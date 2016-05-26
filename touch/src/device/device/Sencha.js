@@ -5,6 +5,7 @@ Ext.define('Ext.device.device.Sencha', {
     extend: 'Ext.device.device.Abstract',
 
     constructor: function() {
+        this.callSuper(arguments);
         this.name = device.name;
         this.uuid = device.uuid;
         this.platform = device.platformName || Ext.os.name;

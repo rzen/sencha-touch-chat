@@ -36,7 +36,7 @@
  *         launch: function() {
  *             if (Ext.device.Device.scheme) {
  *                 // the application was opened via another application. Do something:
- *                 alert('Applicaton pened via another application: ' + Ext.device.Device.scheme.url);
+ *                 alert('Applicaton penned via another application: ' + Ext.device.Device.scheme.url);
  *             }
  *
  *             // Listen for future changes
@@ -66,9 +66,9 @@
  * **PLEASE NOTE: This currently only works with the Sencha Native Packager. If you attempt to listen to this event when packaged with
  * PhoneGap or simply in the browser, it will not function.**
  *
- * @mixins Ext.device.device.Abstract
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
  *
- * @aside guide native_apis
+ * @mixins Ext.device.device.Abstract
  */
 Ext.define('Ext.device.Device', {
     singleton: true,

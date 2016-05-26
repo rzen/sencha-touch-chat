@@ -37,9 +37,31 @@
     padding-right: 3px;
 }
 
+.x-field-input .x-reveal-icon {
+	top: 13px;
+	right: 8px;
+	background: theme_image('bb10', "reveal_icon.png") no-repeat;
+	width: 24px;
+	height: 24px;
+
+	&.x-pressing {
+		background-position: top right;
+	}
+}
+
+.x-field.x-revealed .x-reveal-icon {
+	background-position: top right;
+}
+
+.x-field-clearable.x-field-revealable {
+	.x-reveal-icon {
+		right: 36px;
+	}
+}
+
 .x-field-input .x-clear-icon {
-    top: 13px;
-    right: 8px;
+		top: 13px;
+		right: 8px;
     background: theme_image('bb10', "clear_icon.png") no-repeat;
     width: 24px;
     height: 24px;

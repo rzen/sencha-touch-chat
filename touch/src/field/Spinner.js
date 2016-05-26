@@ -1,18 +1,17 @@
 /**
- * @aside guide forms
- *
  * Wraps an HTML5 number field. Example usage:
  *
  *     @example miniphone
  *     var spinner = Ext.create('Ext.field.Spinner', {
- *         label: 'Spinner Field',
- *         minValue: 0,
- *         maxValue: 100,
- *         increment: 2,
- *         cycle: true
+ *         label     : 'Spinner Field',
+ *         minValue  : 0,
+ *         maxValue  : 100,
+ *         stepValue : 2,
+ *         cycle     : true
  *     });
  *     Ext.Viewport.add({ xtype: 'container', items: [spinner] });
  *
+ * For more information regarding forms and fields, please review [Using Forms in Sencha Touch Guide](../../../components/forms.html)
  */
 Ext.define('Ext.field.Spinner', {
     extend: 'Ext.field.Number',

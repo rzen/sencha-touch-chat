@@ -5,6 +5,14 @@ Ext.define('Ext.field.FileInput', {
     extend: 'Ext.field.Input',
     xtype: 'fileinput',
 
+    /**
+     * @event change
+     * Fires just before the field blurs if the field value has changed
+     * @param {Ext.field.Text} this This field
+     * @param {Mixed} newValue The new value
+     * @param {Mixed} oldValue The original value
+     */
+
     config: {
         type: "file",
         accept: null,

@@ -26,11 +26,11 @@
  *         }
  *     });
  *
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
+ *
  * @mixins Ext.device.contacts.Abstract
  * @mixins Ext.device.contacts.Sencha
  * @mixins Ext.device.contacts.Cordova
- *
- * @aside guide native_apis
  */
 Ext.define('Ext.device.Contacts', {
     singleton: true,

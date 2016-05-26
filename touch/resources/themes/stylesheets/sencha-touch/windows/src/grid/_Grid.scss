@@ -83,4 +83,14 @@
 	        border-color: #C0C0C0;
 	    }
 	}
+
+    .x-grid-header {
+        background-color: $background-color;
+        background-color: $base-color;
+        color: $foreground-color;
+        border: 0;
+        padding-left: 5px;
+        font-weight: normal;
+        font-size: 17pt;
+    }
 }

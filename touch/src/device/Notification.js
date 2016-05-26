@@ -30,10 +30,10 @@
  * To make the device vibrate:
  *
  *     Ext.device.Notification.vibrate();
+ *     
+ * For more information regarding Native APIs, please review our [Native APIs guide](../../../packaging/native_apis.html).
  *
  * @mixins Ext.device.notification.Abstract
- *
- * @aside guide native_apis
  */
 Ext.define('Ext.device.Notification', {
     singleton: true,

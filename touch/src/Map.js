@@ -12,7 +12,6 @@
  *         useCurrentLocation: true
  *     });
  *
- * @aside example maps
  */
 Ext.define('Ext.Map', {
     extend: 'Ext.Container',

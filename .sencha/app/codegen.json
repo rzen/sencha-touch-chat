@@ -13,7 +13,7 @@
       "cbdf9712e9b5d37cecb4d0530ba1fccd0ed004a3": "eJytkUEOwjAMBO+8YkXv/QF/4MAHAnGpRbArxy3i97gFQbk3t6ycmbXS4LDl2TU49VzRcSEMphNnqkgCncgsLhiUxdGpIVOXxuKYknE6l5iLhIUyWBCgeJ7Hi7NK+xmtbWQDmTPVNkRUF8knQTKCSnmC74OaB+jRk+A8csks10DOWu8J+x97D5KJTeVO4u2uianjD7lq5N+9PN1mL6uxP5fN3o5Vuwh87hO0pVHRlAMz+//cy7sa2o2/4QV6LJW9"
     },
     "sencha.cfg.tpl.merge": {
-      "d2e6e42720f88befc892f12df5fd7bab587f7879": "eJxtUDEOwjAM3PsKSzAi6MaUhQfwAhaTujTQNpHtClWof8cpamFgSU53F/sumNK+x47cK59TUaARNRt+Rn641wrPX9m3KJJQG7e9DGV5PGWyCjwdMrjL7g9dFBvQJggkjolYR5BEPtSBBBB87DoEoYSMShW0QRRiDXmJmNorhj70NxvCJHFgb880mpLGfGtDcB1CW4HtI6+RxznpYt7Pg9wn/mzMwZb4uZ71MdsqTYefDp+feQN/i2pK"
+      "44881c454b83bede915fb06fde85969d8e7fc37a": "eJxtTzEOwjAM3PsKSzCi0o2pC+9gMalLDW0S2a5Qhfp3kqAiBhbbujvbdxhj7XGi9pXrWlWYADeiakQb2v1lbprTOYMdy3rMw10Pf+Cq2oENrBAlRBJbQCM57pkUEFyYJgSliIJGHYysBqGH/EQT6w3Zs7+lI0IaZnFpzUJi4pK7DQTXmccO0j9yFmQpTjdxXQ61H/tFmI1t9p9BHilPkn2p9fiToUR/AxN4Xms\u003d"
     },
     "testing.properties.merge": {
       "360e715956c81757e53736789fe20be045acb544": "eJytkMENwjAMRe+d4oveuwE7cGCBoLjUItiVY4q6PW6pKAM0t1g/732nxfnI07S4DlzRcyGMphNnqkgCncgsLhiVxdGrIVOfXsUxJeN0K5GLCQtlsCBATtVZ7t2Wq13wRjJnql1YqK6GbYJkBJUyg5+jmgflPZDg9uKSgxK8xekD4bSBTyCZ2FSeJN41bUQuO++vi/828vRYpKzGPq87fQV/1WLgS5mgrXWKphyYRb6L10c1nAf//gdqIpHi"
@@ -35,6 +35,9 @@
     },
     "config.rb.tpl.merge": {
       "e254e92dd21bc9ecb27f3b8251d67dfbc79fa1af": "eJxlkMFOwzAMhu95Cqs7bEiQB0DaCTGEtAPiBSIrddtAG5c4ASrEu+N00kDjYtl/7O+PvYEHypAHgjYk8pnTohVWKQh4jl3oS8IcOEIXRgL6DJIFQjQ6AHs4qGg1jTjRzrnD4/HeuStjNnBkbFeyUPQD3mQufoAuaeMHp1fAknlSssdxXKwZa/tKe+EQd4q8hq2123P8Oo8+YR6+q5RIuCRPUgu1mjRbve94mlEuFhAjqrlZp/XjamD8b3nh3FjbaNSGZgU+01vRAwHGBbBtQ+XhqPyTzzyWPkSBgRJZEybsSdyfA/0Dn1qUzSXPJTvJix53D7eVqGsJtYbie0gcJ4q5vsyJ2+KrsfkBl52Ucw\u003d\u003d"
+    },
+    "development.properties.merge": {
+      "c45c602c9b6f6f73cace183e9f0bf09c00a3ccf6": "eJytkUuOAjEMBfec4one9w24wyy4QFDc0xbBjhyTEbcfp0F89mRny6l6liccvvl2E44rNyxcCNW0c6aGJNBOZlGgKotjUUOmJV2LoyfjdCoxFx0WymBBgJyas/zOj7k2B6+SOVObw0JtMzw6SEZQKTfwpap5UP5WEpyuXHJQgjecvhL2mToVrRcS34Oks6mMYt5NMfbzYr7l8edWns5DzGrst22vu+QtXjR8BAraFqloyoEZAT7l28cW3i9f4R+b7pUs"
     }
   },
   "targets": {
@@ -42,140 +45,147 @@
       "source": "build.properties.merge",
       "version": "ec0f832e80d63d776086203cffe9fed5c73b4294",
       "parameters": {
-        "viewNamespace": "Chat.view",
+        "appControllers": "",
+        "appModels": "",
+        "appName": "Chat",
+        "appStores": "",
+        "appViews": "",
+        "controllerNamespace": "Chat.controller",
+        "frameworkKey": "touch",
         "frameworkName": "touch",
         "frameworkPath": "touch",
-        "senchadir": ".sencha",
-        "appModels": "",
-        "appControllers": "",
-        "appViews": "",
-        "uniqueId": "888fd423-d28b-45bb-96b1-5671d26607da",
-        "appName": "Chat",
+        "library": "core",
         "modelNamespace": "Chat.model",
         "name": "Chat",
-        "library": "core",
-        "controllerNamespace": "Chat.controller",
-        "appStores": ""
+        "senchadir": ".sencha",
+        "uniqueId": "fd95add2-d341-418c-9ebf-d3f5bcb9ff73",
+        "viewNamespace": "Chat.view"
       }
     },
     ".sencha/app/native.properties": {
       "source": "native.properties.merge",
       "version": "2c8c063f9588eecff09624782d7369a8a000d61c",
       "parameters": {
-        "viewNamespace": "Chat.view",
+        "appControllers": "",
+        "appModels": "",
+        "appName": "Chat",
+        "appStores": "",
+        "appViews": "",
+        "controllerNamespace": "Chat.controller",
+        "frameworkKey": "touch",
         "frameworkName": "touch",
         "frameworkPath": "touch",
-        "senchadir": ".sencha",
-        "appModels": "",
-        "appControllers": "",
-        "appViews": "",
-        "uniqueId": "888fd423-d28b-45bb-96b1-5671d26607da",
-        "appName": "Chat",
+        "library": "core",
         "modelNamespace": "Chat.model",
         "name": "Chat",
-        "library": "core",
-        "controllerNamespace": "Chat.controller",
-        "appStores": ""
+        "senchadir": ".sencha",
+        "uniqueId": "fd95add2-d341-418c-9ebf-d3f5bcb9ff73",
+        "viewNamespace": "Chat.view"
       }
     },
     ".sencha/app/package.properties": {
       "source": "package.properties.merge",
       "version": "c6c1fb2fb1dda28480ad0f6e5caffc9b97d196ae",
       "parameters": {
-        "viewNamespace": "Chat.view",
+        "appControllers": "",
+        "appModels": "",
+        "appName": "Chat",
+        "appStores": "",
+        "appViews": "",
+        "controllerNamespace": "Chat.controller",
+        "frameworkKey": "touch",
         "frameworkName": "touch",
         "frameworkPath": "touch",
-        "senchadir": ".sencha",
-        "appModels": "",
-        "appControllers": "",
-        "appViews": "",
-        "uniqueId": "888fd423-d28b-45bb-96b1-5671d26607da",
-        "appName": "Chat",
+        "library": "core",
         "modelNamespace": "Chat.model",
         "name": "Chat",
-        "library": "core",
-        "controllerNamespace": "Chat.controller",
-        "appStores": ""
+        "senchadir": ".sencha",
+        "uniqueId": "fd95add2-d341-418c-9ebf-d3f5bcb9ff73",
+        "viewNamespace": "Chat.view"
       }
     },
     ".sencha/app/production.properties": {
       "source": "production.properties.merge",
       "version": "cbdf9712e9b5d37cecb4d0530ba1fccd0ed004a3",
       "parameters": {
-        "viewNamespace": "Chat.view",
+        "appControllers": "",
+        "appModels": "",
+        "appName": "Chat",
+        "appStores": "",
+        "appViews": "",
+        "controllerNamespace": "Chat.controller",
+        "frameworkKey": "touch",
         "frameworkName": "touch",
         "frameworkPath": "touch",
-        "senchadir": ".sencha",
-        "appModels": "",
-        "appControllers": "",
-        "appViews": "",
-        "uniqueId": "888fd423-d28b-45bb-96b1-5671d26607da",
-        "appName": "Chat",
+        "library": "core",
         "modelNamespace": "Chat.model",
         "name": "Chat",
-        "library": "core",
-        "controllerNamespace": "Chat.controller",
-        "appStores": ""
+        "senchadir": ".sencha",
+        "uniqueId": "fd95add2-d341-418c-9ebf-d3f5bcb9ff73",
+        "viewNamespace": "Chat.view"
       }
     },
     ".sencha/app/sencha.cfg": {
       "source": "sencha.cfg.tpl.merge",
-      "version": "d2e6e42720f88befc892f12df5fd7bab587f7879",
+      "version": "44881c454b83bede915fb06fde85969d8e7fc37a",
       "parameters": {
-        "viewNamespace": "Chat.view",
+        "appControllers": "",
+        "appModels": "",
+        "appName": "Chat",
+        "appStores": "",
+        "appViews": "",
+        "controllerNamespace": "Chat.controller",
+        "frameworkKey": "touch",
         "frameworkName": "touch",
         "frameworkPath": "touch",
-        "senchadir": ".sencha",
-        "appModels": "",
-        "appControllers": "",
-        "appViews": "",
-        "uniqueId": "888fd423-d28b-45bb-96b1-5671d26607da",
-        "appName": "Chat",
+        "library": "core",
         "modelNamespace": "Chat.model",
         "name": "Chat",
-        "library": "core",
-        "controllerNamespace": "Chat.controller",
-        "appStores": ""
+        "senchadir": ".sencha",
+        "uniqueId": "fd95add2-d341-418c-9ebf-d3f5bcb9ff73",
+        "viewNamespace": "Chat.view"
       }
     },
     ".sencha/app/testing.properties": {
       "source": "testing.properties.merge",
       "version": "360e715956c81757e53736789fe20be045acb544",
       "parameters": {
-        "viewNamespace": "Chat.view",
+        "appControllers": "",
+        "appModels": "",
+        "appName": "Chat",
+        "appStores": "",
+        "appViews": "",
+        "controllerNamespace": "Chat.controller",
+        "frameworkKey": "touch",
         "frameworkName": "touch",
         "frameworkPath": "touch",
-        "senchadir": ".sencha",
-        "appModels": "",
-        "appControllers": "",
-        "appViews": "",
-        "uniqueId": "888fd423-d28b-45bb-96b1-5671d26607da",
-        "appName": "Chat",
+        "library": "core",
         "modelNamespace": "Chat.model",
         "name": "Chat",
-        "library": "core",
-        "controllerNamespace": "Chat.controller",
-        "appStores": ""
+        "senchadir": ".sencha",
+        "uniqueId": "fd95add2-d341-418c-9ebf-d3f5bcb9ff73",
+        "viewNamespace": "Chat.view"
       }
     },
     "app.js": {
       "source": "app.js.tpl.merge",
       "version": "bf7e5518d2efd28e0a64077e1e7666428cf994ae",
       "parameters": {
-        "viewNamespace": "Chat.view",
+        "appControllers": "",
+        "appModels": "",
+        "appName": "Chat",
+        "appStores": "",
+        "appViews": "",
+        "controllerNamespace": "Chat.controller",
+        "frameworkKey": "touch",
         "frameworkName": "touch",
         "frameworkPath": "touch",
-        "senchadir": ".sencha",
-        "appModels": "",
-        "appControllers": "",
-        "appViews": "",
-        "uniqueId": "888fd423-d28b-45bb-96b1-5671d26607da",
-        "appName": "Chat",
+        "library": "core",
         "modelNamespace": "Chat.model",
         "name": "Chat",
-        "library": "core",
-        "controllerNamespace": "Chat.controller",
-        "appStores": ""
+        "senchadir": ".sencha",
+        "uniqueId": "fd95add2-d341-418c-9ebf-d3f5bcb9ff73",
+        "viewNamespace": "Chat.view"
       }
     },
     "app.json": {
@@ -242,40 +252,63 @@
       "source": "app.scss.tpl.merge",
       "version": "3d3f6b023c31a4e49cd626dd27cff9474aff32d7",
       "parameters": {
-        "viewNamespace": "Chat.view",
+        "appControllers": "",
+        "appModels": "",
+        "appName": "Chat",
+        "appStores": "",
+        "appViews": "",
+        "controllerNamespace": "Chat.controller",
+        "frameworkKey": "touch",
         "frameworkName": "touch",
         "frameworkPath": "touch",
-        "senchadir": ".sencha",
-        "appModels": "",
-        "appControllers": "",
-        "appViews": "",
-        "uniqueId": "888fd423-d28b-45bb-96b1-5671d26607da",
-        "appName": "Chat",
+        "library": "core",
         "modelNamespace": "Chat.model",
         "name": "Chat",
-        "library": "core",
-        "controllerNamespace": "Chat.controller",
-        "appStores": ""
+        "senchadir": ".sencha",
+        "uniqueId": "fd95add2-d341-418c-9ebf-d3f5bcb9ff73",
+        "viewNamespace": "Chat.view"
       }
     },
     "resources/sass/config.rb": {
       "source": "config.rb.tpl.merge",
       "version": "e254e92dd21bc9ecb27f3b8251d67dfbc79fa1af",
       "parameters": {
-        "viewNamespace": "Chat.view",
+        "appControllers": "",
+        "appModels": "",
+        "appName": "Chat",
+        "appStores": "",
+        "appViews": "",
+        "controllerNamespace": "Chat.controller",
+        "frameworkKey": "touch",
         "frameworkName": "touch",
         "frameworkPath": "touch",
-        "senchadir": ".sencha",
-        "appModels": "",
-        "appControllers": "",
-        "appViews": "",
-        "uniqueId": "888fd423-d28b-45bb-96b1-5671d26607da",
-        "appName": "Chat",
+        "library": "core",
         "modelNamespace": "Chat.model",
         "name": "Chat",
-        "library": "core",
+        "senchadir": ".sencha",
+        "uniqueId": "fd95add2-d341-418c-9ebf-d3f5bcb9ff73",
+        "viewNamespace": "Chat.view"
+      }
+    },
+    ".sencha/app/development.properties": {
+      "source": "development.properties.merge",
+      "version": "c45c602c9b6f6f73cace183e9f0bf09c00a3ccf6",
+      "parameters": {
+        "appControllers": "",
+        "appModels": "",
+        "appName": "Chat",
+        "appStores": "",
+        "appViews": "",
         "controllerNamespace": "Chat.controller",
-        "appStores": ""
+        "frameworkKey": "touch",
+        "frameworkName": "touch",
+        "frameworkPath": "touch",
+        "library": "core",
+        "modelNamespace": "Chat.model",
+        "name": "Chat",
+        "senchadir": ".sencha",
+        "uniqueId": "fd95add2-d341-418c-9ebf-d3f5bcb9ff73",
+        "viewNamespace": "Chat.view"
       }
     }
   }

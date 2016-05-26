@@ -149,6 +149,7 @@
 
         .x-column-options-sortablehandle,
         .x-column-options-visibleindicator,
+        .x-column-options-groupindicator,
         .x-column-options-folder,
         .x-column-options-leaf {
             width: 40px;
@@ -183,6 +184,15 @@
                 font-size: 30px;
                 line-height: 54px;
                 content: icon-character-for-name('eye');
+            }
+        }
+
+        .x-column-options-groupindicator {
+            right: 40px;
+            &:after {
+                font-size: 30px;
+                line-height: 54px;
+                content: icon-character-for-name('team');
             }
         }
 
@@ -297,4 +307,36 @@
     .x-grid-summaryrow .x-grid-multiselection-cell:after {
         content: '';
     }
+}
+
+// Provides ability to capture events on the grid
+.x-ie .x-grid-grouped .x-translatable-container {
+    .x-grid-row, .x-grid-header {
+        &:before {
+            content: ". .";
+            color: transparent;
+            position: absolute;
+            left: 0px;
+            word-spacing: 3000px;
+            opacity: 0;
+        }
+    }
+}
+
+.x-grid-header {
+    line-height: 44px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2 !important;
+}
+
+.x-ios .x-grid-header {
+    @include transform(translate3d(0, 0, 0));
+}
+
+.x-grid-grouped .x-grid-row.x-grid-header-wrap .x-dock-horizontal,
+.x-grid-grouped .x-grid-row-tpl.x-grid-header-wrap {
+    border-top: 0;
 }
