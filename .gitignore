@@ -2,8 +2,6 @@
 /build
 /archive
 .sass-cache
-/nodejs/node_modules
-/touch/sencha-touch-*.js
-/touch/packages
 /bootstrap.js
 /bootstrap.json
+/touch/examples
